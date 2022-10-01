@@ -1,0 +1,32 @@
+.app{
+    width: 700px;
+    height: 680px;
+    margin-left: 27%;
+    margin-top: 18px;
+    background-color: white;
+}
+
+.meme{
+    width: 85%;
+    height: 520px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.gradient{
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+.text-color-wh{
+    color: #FFFFFF;
+}
+
+.font-famaily-karla{
+    font-family: 'Karla';
+    font-style: normal;
+}
+
+.font-famaily-inter{
+    font-family: 'Inter';
+    font-style: normal;
+}
