@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from "./components/Header";
 import Input from "./components/Input";
-import Output from './components/Output';
 import './styles/App.css';
 
 function App() {
@@ -10,7 +9,6 @@ function App() {
       <Header/>
       <div className='meme'>
         <Input/>
-        <Output/>
       </div>
     </div>
   );
