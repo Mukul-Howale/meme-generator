@@ -12,11 +12,33 @@ export default function Input(){
 
     const [allMemes, setAllMemes] = useState();
 
+    /**
+    useEffect takes a function as its parameter. If that function
+    returns something, it needs to be a cleanup function. Otherwise,
+    it should return nothing. If we make it an async function, it
+    automatically retuns a promise instead of a function or nothing.
+    Therefore, if you want to use async operations inside of useEffect,
+    you need to define the function separately inside of the callback
+    function, as seen below:
+    */
+
     useEffect(() => {
         fetch("https://api.imgflip.com/get_memes")
         .then(res => res.json())
         .then(data => setAllMemes(data.data.memes))
     },[])
+
+    // Above fn can also be written as below if async keyword is used:
+
+    // useEffect(() =>{
+    //     async function get_memes(){
+    //         const res = await fetch("https://api.imgflip.com/get_memes");
+    //         const data = await res.json();
+    //         setAllMemes(data.data.memes)
+    //     }
+
+    //     get_memes();
+    // }, [])
 
     let setOutput = (
         <Output
